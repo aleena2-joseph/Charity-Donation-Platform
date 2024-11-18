@@ -1,7 +1,3 @@
-Here's the updated and detailed **README** for your project, with a focus on the necessary setup steps, commands, and instructions for running both the **Hardhat smart contracts** and the **PHP frontend**:
-
----
-
 # Charity Donation Tracking System
 
 The **Charity Donation Tracking System** is a decentralized application (DApp) that allows transparent and secure charity donations using **Ethereum smart contracts**. The system is built with **Hardhat** for blockchain interaction and **PHP** for the frontend, enabling donors to contribute to charity causes in a seamless and traceable manner.
@@ -18,10 +14,10 @@ Follow these steps to set up the Charity Donation Tracking System locally, which
 
 Ensure the following tools are installed on your machine:
 
-- **Node.js** (v16 or later)
-- **npm** (v8 or later)
 - **PHP** (for frontend)
 - **Composer** (for managing PHP dependencies, if necessary)
+- **Hardhat** (for deploying and interacting with Ethereum smart contracts)
+- **Ethereum Wallet** (e.g., MetaMask) for interacting with the smart contract during deployment and transactions.
 
 ---
 
@@ -41,9 +37,7 @@ cd kba-project-main
 
 ---
 
-### Step 2: Install Dependencies
-
-#### Install Smart Contract Dependencies (Hardhat)
+### Step 2: Install Smart Contract Dependencies (Hardhat)
 
 Navigate to the **hardhat** directory and install all the required dependencies for the smart contract:
 
@@ -54,22 +48,11 @@ npm install
 
 This will install **Hardhat**, **ethers.js**, and other dependencies necessary for the smart contract development.
 
-#### Install Frontend Dependencies (PHP)
-
-For the **frontend**, if you are using any PHP dependencies or frameworks (like Laravel, Symfony, etc.), you'll need to install them using **Composer**. Navigate to the **frontend** directory and run:
-
-```bash
-cd ../frontend
-composer install
-```
-
-This will install any required PHP dependencies. If you don't use Composer or PHP frameworks, you can skip this step.
-
 ---
 
 ### Step 3: Compile Smart Contracts
 
-Once the dependencies are installed, it's time to compile the smart contracts. Go back to the **hardhat** directory and run:
+Once the dependencies are installed, it's time to compile the smart contracts. In the **hardhat** directory, run:
 
 ```bash
 npx hardhat compile
@@ -81,7 +64,7 @@ This will compile your **Solidity** contracts into artifacts, which are necessar
 
 ### Step 4: Deploy the Smart Contracts
 
-To deploy the smart contracts, you need to first start a **Hardhat network** to simulate the blockchain locally:
+To deploy the smart contracts, you need to first start a **Hardhat network** to simulate the blockchain locally. In the **hardhat** directory, run:
 
 ```bash
 npx hardhat node
@@ -89,10 +72,10 @@ npx hardhat node
 
 This will start a local Ethereum network on `http://localhost:8545`. Keep this terminal running as the local Ethereum node.
 
-Now, open another terminal window and deploy the contracts to this local network:
+Now, open another terminal window, navigate to the **hardhat** directory, and deploy the contracts to this local network:
 
 ```bash
-npx hardhat run scripts/deploy.js --network localhost
+npx hardhat ignition deploy ./ignition/modules/Charity.js --network localhost
 ```
 
 This will deploy your smart contracts to the local Ethereum network. After successful deployment, you will see the deployed contract's address. Keep this address, as you’ll need it in the next step to configure the frontend.
@@ -140,7 +123,7 @@ You should see the **Charity Donation Tracking System** frontend, where users ca
 
 ---
 
-### Technologies Used
+## Technologies Used
 
 - **Hardhat**: Ethereum development environment for smart contract compilation, testing, and deployment.
 - **Solidity**: Language for writing smart contracts.
@@ -149,11 +132,3 @@ You should see the **Charity Donation Tracking System** frontend, where users ca
 - **ethers.js**: JavaScript library for interacting with the Ethereum blockchain (used in PHP via JS integration).
 
 ---
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-By following these steps, you'll have a fully functional **Charity Donation Tracking System** running locally with both the blockchain backend (via Hardhat) and the frontend (via PHP).
