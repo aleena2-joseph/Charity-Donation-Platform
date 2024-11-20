@@ -9,8 +9,10 @@ The **Charity Donation Tracking System** is a decentralized application (DApp) t
 Follow these steps to set up the Charity Donation Tracking System locally, which includes deploying the smart contract and running the frontend PHP server.
 
 ---
+## Video Demo:
+https://youtu.be/CtOnuUdp4Nc?si=tVy2qbZs6cR60OgG
 
-### Prerequisites
+### Technologies Used:
 
 Ensure the following tools are installed on your machine:
 
@@ -18,9 +20,9 @@ Ensure the following tools are installed on your machine:
 - **Composer** (for managing PHP dependencies, if necessary)
 - **Hardhat** (for deploying and interacting with Ethereum smart contracts)
 - **Ethereum Wallet** (e.g., MetaMask) for interacting with the smart contract during deployment and transactions.
-
----
-
+- **Solidity**: Language for writing smart contracts.
+- **ethers.js**: JavaScript library for interacting with the Ethereum blockchain (used in PHP via JS integration).
+https://images.app.goo.gl/zS5sb5VWCHUW2AiUA
 ### Step 1: Clone the Repository
 
 Start by cloning the repository to your local machine:
@@ -123,13 +125,5 @@ You should see the **Charity Donation Tracking System** frontend, where users ca
 
 ---
 
-## Technologies Used
 
-- **Hardhat**: Ethereum development environment for smart contract compilation, testing, and deployment.
-- **Solidity**: Language for writing smart contracts.
-- **PHP**: Backend for the frontend of the DApp.
-- **Composer**: Dependency management for PHP (if applicable).
-- **ethers.js**: JavaScript library for interacting with the Ethereum blockchain (used in PHP via JS integration).
 
----
-Video Demo: https://youtu.be/CtOnuUdp4Nc?si=tVy2qbZs6cR60OgG
