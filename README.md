@@ -22,8 +22,7 @@ Ensure the following tools are installed on your machine:
 - **Ethereum Wallet** (e.g., MetaMask) for interacting with the smart contract during deployment and transactions.
 - **Solidity**: Language for writing smart contracts.
 - **ethers.js**: JavaScript library for interacting with the Ethereum blockchain (used in PHP via JS integration).
-<img src="https://images.app.goo.gl/zS5sb5VWCHUW2AiUA" alt="">
-
+- 
 ### Step 1: Clone the Repository
 
 Start by cloning the repository to your local machine:
